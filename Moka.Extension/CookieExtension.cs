@@ -35,7 +35,7 @@ namespace Moka.Extension
 
         public static List<Cookie> GetCookies(this CookieContainer cookieContainer)
         {
-            var collection = GetCollection(cookieContainer);
+            CookieCollection collection = GetCollection(cookieContainer);
             var cookies = new List<Cookie>();
             foreach (Cookie cookie in collection)
             {
