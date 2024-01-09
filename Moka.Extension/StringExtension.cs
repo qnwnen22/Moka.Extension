@@ -74,7 +74,7 @@ namespace Moka.Extension
             var list = new List<string>();
             while (true)
             {
-                var start = text.IndexOf(startWord);
+                int start = text.IndexOf(startWord);
                 if (start < 0) break;
                 switch (includes)
                 {
@@ -87,7 +87,7 @@ namespace Moka.Extension
                 }
 
                 text = text.Substring(start);
-                var end = text.IndexOf(endWord);
+                int end = text.IndexOf(endWord);
                 if (end < 0) break;
                 switch (includes)
                 {
@@ -98,7 +98,7 @@ namespace Moka.Extension
                     default:
                         break;
                 }
-                var subStringText = text.Substring(0, end);
+                string subStringText = text.Substring(0, end);
                 if (string.IsNullOrEmpty(subStringText))
                 {
                     break;
